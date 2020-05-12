@@ -1,0 +1,44 @@
+{
+  "name": "functions",
+  "scripts": {
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "exceljs": "^3.9.0",
+    "express": "^4.17.1",
+    "firebase-admin": "^8.9.2",
+    "firebase-auth": "^0.1.2",
+    "firebase-functions": "^3.3.0",
+    "moment": "^2.24.0",
+    "node-excel-export": "^1.4.4",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.2",
+    "cors": "^2.8.5",
+    "express-upload": "^0.1.0",
+    "firebase-functions-test": "^0.1.6",
+    "tslint": "^5.12.0",
+    "typescript": "^3.2.2"
+  },
+  "private": true,
+  "version": "1.0.0",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
